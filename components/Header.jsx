@@ -16,10 +16,10 @@ export default function Header() {
                 </div>
 
                 <nav className="hidden sm:flex gap-[10px] text-gray-700 font-medium">
-                    <a className="hover:text-pink-600" href="#">Home</a>
-                    <a className="hover:text-pink-600" href="#">Shop</a>
-                    <a className="hover:text-pink-600" href="#">About</a>
-                    <a className="hover:text-pink-600" href="#">Contact</a>
+                    <a className="hover:text-pink-600 cursor-pointer" href="#">Home</a>
+                    <a className="hover:text-pink-600 cursor-pointer" href="#">Shop</a>
+                    <a className="hover:text-pink-600 cursor-pointer" href="#">About</a>
+                    <a className="hover:text-pink-600 cursor-pointer" href="#">Contact</a>
                 </nav>
 
                 <div className="flex items-center gap-[30px]">
@@ -40,10 +40,10 @@ export default function Header() {
             </div>
             {isOpen && (
                 <nav className="sm:hidden flex flex-col bg-white px-4 pb-4 gap-[10px] text-gray-700 font-medium">
-                <a href="#" className="hover:text-pink-600">Home</a>
-                <a href="#" className="hover:text-pink-600">Shop</a>
-                <a href="#" className="hover:text-pink-600">About</a>
-                <a href="#" className="hover:text-pink-600">Contact</a>
+                <a href="#" className="hover:text-pink-600 cursor-pointer">Home</a>
+                <a href="#" className="hover:text-pink-600 cursor-pointer">Shop</a>
+                <a href="#" className="hover:text-pink-600 cursor-pointer">About</a>
+                <a href="#" className="hover:text-pink-600 cursor-pointer">Contact</a>
                 </nav>
             )}
         </header> 
