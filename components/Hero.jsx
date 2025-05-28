@@ -1,3 +1,4 @@
+import React from "react"
 import Hero1 from "../images/hero1.jpg"
 export default function Hero() {
     return(
