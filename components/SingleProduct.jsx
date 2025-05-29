@@ -1,5 +1,6 @@
 import React from "react"
 import { useCart } from "./CartContext.jsx";
+import toast from "react-hot-toast";
 import {useParams, Link} from "react-router-dom"
 import products from "./Products"
 
@@ -29,7 +30,10 @@ export default function SingleProduct() {
           </p>
           {/* ✅ Updated Add to Cart Button */}
           <button 
-            onClick={() => addToCart(product)} 
+            onClick={() => {
+              addToCart(product);
+              toast.success("Added to cart");
+            }}
             className="bg-pink-600 text-white px-6 py-3 rounded-md hover:bg-pink-700 transition"
           >
             Add to Cart

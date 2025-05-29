@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import { useCart } from "./CartContext.jsx";
 import { ShoppingCart, Menu, X } from "lucide-react"
 import logo from "../images/logo7.png"
@@ -18,20 +19,19 @@ export default function Header() {
                 </div>
 
                 <nav className="hidden sm:flex gap-[10px] text-gray-700 font-medium">
-                    <a className="hover:text-pink-600 cursor-pointer" href="#">Home</a>
-                    <a className="hover:text-pink-600 cursor-pointer" href="#">Shop</a>
-                    <a className="hover:text-pink-600 cursor-pointer" href="#">About</a>
-                    <a className="hover:text-pink-600 cursor-pointer" href="#">Contact</a>
+                    <Link className="hover:text-pink-600 cursor-pointer" to="/">Home</Link>
+                    <Link className="hover:text-pink-600 cursor-pointer" to="/">Shop</Link>
+                    <Link className="hover:text-pink-600 cursor-pointer" to="#">About</Link>
+                    <Link className="hover:text-pink-600 cursor-pointer" to="#">Contact</Link>
                 </nav>
 
                 <div className="flex items-center gap-[30px]">
-                    <div className="text-gray-700 relative">
-                        <ShoppingCart className="w-6 h-6"/>
-                        <span 
-                          className="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                          {cartItems.length} {/* ✅ Show dynamic count */}
+                    <Link to="/cart" className="text-gray-700 relative">
+                        <ShoppingCart className="w-6 h-6" />
+                        <span className="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                            {cartItems.length}
                         </span>
-                    </div>
+                    </Link>
 
                     <button 
                     className="sm:hidden"
@@ -42,10 +42,10 @@ export default function Header() {
             </div>
             {isOpen && (
                 <nav className="sm:hidden flex flex-col bg-white px-4 pb-4 gap-[10px] text-gray-700 font-medium">
-                <a href="#" className="hover:text-pink-600 cursor-pointer">Home</a>
-                <a href="#" className="hover:text-pink-600 cursor-pointer">Shop</a>
-                <a href="#" className="hover:text-pink-600 cursor-pointer">About</a>
-                <a href="#" className="hover:text-pink-600 cursor-pointer">Contact</a>
+                    <Link className="hover:text-pink-600 cursor-pointer" to="/">Home</Link>
+                    <Link className="hover:text-pink-600 cursor-pointer" to="/">Shop</Link>
+                    <Link className="hover:text-pink-600 cursor-pointer" to="#">About</Link>
+                    <Link className="hover:text-pink-600 cursor-pointer" to="#">Contact</Link>
                 </nav>
             )}
         </header> 
