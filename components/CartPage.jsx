@@ -1,5 +1,6 @@
 // src/components/CartPage.jsx
 import React from "react";
+import emptyCart from "../images/emptycart.jpg"
 import { useCart } from "./CartContext.jsx";
 import { Link } from "react-router-dom";
 
@@ -10,11 +11,12 @@ export default function CartPage() {
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Your Cart</h2>
 
       {cartItems.length === 0 ? (
         <div className="text-center text-gray-600">
+          <img src={emptyCart} alt="Empty cart" className="w-40 mx-auto mb-4" />
           Your cart is empty.
           <div className="mt-4">
             <Link to="/" className="text-pink-500 hover:underline">← Go back to shop</Link>
@@ -22,6 +24,9 @@ export default function CartPage() {
         </div>
       ) : (
         <div className="space-y-6">
+            <h3 className="text-xl font-semibold mb-4 text-gray-700 border-b pb-2">
+                Cart Items
+            </h3>
           {cartItems.map((item, index) => (
             <div
               key={index}
@@ -65,13 +70,16 @@ export default function CartPage() {
           <div className="text-right text-xl font-semibold text-gray-800">
             Total: Ksh {total}
           </div>
-          
+
           <div className="text-right mt-4">
             <Link
-                to="/checkout"
-                className="inline-block bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition"
+              to="/checkout"
+              className="inline-flex items-center gap-2 bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition"
             >
-                Proceed to Checkout
+              Proceed to Checkout
+              <span className="bg-pink-100 text-pink-700 text-xs font-semibold px-2 py-0.5 rounded-full">
+                {cartItems.length}
+              </span>
             </Link>
         </div>
           {/* Clear Cart Button */}

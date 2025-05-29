@@ -3,7 +3,7 @@ import Hero1 from "../images/hero1.jpg"
 export default function Hero() {
     return(
         <section className="bg-pink-50 py-12">
-            <div className="max-w-7xl mx-auto flex flex-col-reverse sm:flex-row items-center px-6 gap-10">
+            <div className="max-w-7xl mx-auto flex flex-col-reverse sm:flex-row items-center px-4 sm:px-6 lg:px-8 gap-10">
                 <div className="text-center sm:text-left flex-1">
                     <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">Discover Your Style with JAYS-CLOSET</h1>
                     <p className="text-lg text-gray-600 mb-6">Trendy, Elegant, and Affordable Women's Fashion Delivered to Your Doorstep.</p>

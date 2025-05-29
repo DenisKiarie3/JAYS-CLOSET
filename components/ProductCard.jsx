@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react"
 export default function ProductCard(props) {
     return(
-        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg hover:scale-105 transition-transform duration-300">
         <Link to={`/product/${props.id}`}>
             <div className="h-[250px] w-[150px] sm:w-[300px] sm:h-[400px]">
                 <img

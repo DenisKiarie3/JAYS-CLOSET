@@ -8,7 +8,7 @@ import { CartProvider } from "./components/CartContext.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
     <CartProvider>
         <>
-        <Toaster position="top-right" toastOptions={{ duration: 2500 }} />
+        <Toaster position="top-right" toastOptions={{ duration: 1000 }} />
         <App />
         </>
     </CartProvider>
