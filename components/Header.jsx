@@ -1,9 +1,11 @@
 import React from "react"
+import { useCart } from "./CartContext.jsx";
 import { ShoppingCart, Menu, X } from "lucide-react"
 import logo from "../images/logo7.png"
 export default function Header() {
     // State to control mobile menu toggle
     const [isOpen, setIsOpen] = React.useState(false)
+    const { cartItems } = useCart(); // ✅ Get cart items
     // Toggle function defined outside JSX
     function toggleMenu () {
         setIsOpen(prevIsOpen => !prevIsOpen)
@@ -26,8 +28,8 @@ export default function Header() {
                     <div className="text-gray-700 relative">
                         <ShoppingCart className="w-6 h-6"/>
                         <span 
-                        className="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                            0
+                          className="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                          {cartItems.length} {/* ✅ Show dynamic count */}
                         </span>
                     </div>
 
