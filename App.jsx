@@ -4,6 +4,7 @@ import Hero from "./components/Hero.jsx"
 import ProductsSection from "./components/ProductsSection.jsx"
 import SingleProduct from "./components/SingleProduct.jsx";
 import CartPage from "./components/CartPage.jsx";
+import CheckoutPage from "./components/CheckoutPage.jsx";
 export default function App() {
     return(
     <Router>
@@ -17,6 +18,7 @@ export default function App() {
         } />
         <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
     </Router>
             

@@ -65,6 +65,15 @@ export default function CartPage() {
           <div className="text-right text-xl font-semibold text-gray-800">
             Total: Ksh {total}
           </div>
+          
+          <div className="text-right mt-4">
+            <Link
+                to="/checkout"
+                className="inline-block bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition"
+            >
+                Proceed to Checkout
+            </Link>
+        </div>
           {/* Clear Cart Button */}
         <div className="text-right mt-4">
             <button
