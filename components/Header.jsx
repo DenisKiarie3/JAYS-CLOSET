@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useCart } from "./CartContext.jsx";
 import { ShoppingCart, Menu, X } from "lucide-react"
 import logo from "../images/logo7.png"
@@ -19,10 +19,25 @@ export default function Header() {
                 </div>
 
                 <nav className="hidden sm:flex gap-[10px] text-gray-700 font-medium">
-                    <Link className="hover:text-pink-600 cursor-pointer" to="/">Home</Link>
-                    <Link className="hover:text-pink-600 cursor-pointer" to="/">Shop</Link>
-                    <Link className="hover:text-pink-600 cursor-pointer" to="#">About</Link>
-                    <Link className="hover:text-pink-600 cursor-pointer" to="#">Contact</Link>
+                    <NavLink to="/" className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-pink-600 font-semibold" : "text-gray-700 hover:text-pink-600"}`}>
+                    Home
+                    </NavLink>
+
+                    <NavLink to="/shop" className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-pink-600 font-semibold" : "text-gray-700 hover:text-pink-600"}`}>
+                    Shop
+                    </NavLink>
+
+                    <NavLink to="/about" className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-pink-600 font-semibold" : "text-gray-700 hover:text-pink-600"}`}>
+                    About
+                    </NavLink>
+
+                    <NavLink to="/contact" className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-pink-600 font-semibold" : "text-gray-700 hover:text-pink-600"}`}>
+                    Contact
+                    </NavLink>
                 </nav>
 
                 <div className="flex items-center gap-[30px]">
@@ -42,10 +57,25 @@ export default function Header() {
             </div>
             {isOpen && (
                 <nav className="sm:hidden flex flex-col bg-white px-4 pb-4 gap-[10px] text-gray-700 font-medium">
-                    <Link className="hover:text-pink-600 cursor-pointer" to="/">Home</Link>
-                    <Link className="hover:text-pink-600 cursor-pointer" to="/">Shop</Link>
-                    <Link className="hover:text-pink-600 cursor-pointer" to="#">About</Link>
-                    <Link className="hover:text-pink-600 cursor-pointer" to="#">Contact</Link>
+                     <NavLink to="/" className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-pink-600 font-semibold" : "text-gray-700 hover:text-pink-600"}`}>
+                    Home
+                    </NavLink>
+
+                    <NavLink to="/shop" className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-pink-600 font-semibold" : "text-gray-700 hover:text-pink-600"}`}>
+                    Shop
+                    </NavLink>
+
+                    <NavLink to="/about" className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-pink-600 font-semibold" : "text-gray-700 hover:text-pink-600"}`}>
+                    About
+                    </NavLink>
+
+                    <NavLink to="/contact" className={({ isActive }) =>
+                    `cursor-pointer ${isActive ? "text-pink-600 font-semibold" : "text-gray-700 hover:text-pink-600"}`}>
+                    Contact
+                    </NavLink>
                 </nav>
             )}
         </header> 

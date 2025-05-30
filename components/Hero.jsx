@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import Hero1 from "../images/hero1.jpg"
 export default function Hero() {
     return(
@@ -7,9 +8,12 @@ export default function Hero() {
                 <div className="text-center sm:text-left flex-1">
                     <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">Discover Your Style with JAYS-CLOSET</h1>
                     <p className="text-lg text-gray-600 mb-6">Trendy, Elegant, and Affordable Women's Fashion Delivered to Your Doorstep.</p>
-                    <a 
-                    className="inline-block bg-pink-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-pink-700 transition"
-                    href="#">Shop Now</a>
+                    <Link 
+                        to="/shop"
+                        className="inline-block bg-pink-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-pink-700 transition"
+                        >
+                        Shop Now
+                    </Link>
                 </div>
 
                 <div className="flex-1">
