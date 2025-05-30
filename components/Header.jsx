@@ -12,7 +12,7 @@ export default function Header() {
         setIsOpen(prevIsOpen => !prevIsOpen)
     }
     return(
-        <header className="bg-white shadow-md">
+        <header className="bg-white shadow-md fixed top-0 w-full z-50">
             <div className="flex items-center justify-between h-[70px] mx-auto sm:px-[20px] px-[20px] max-w-7xl">
                 <div>
                     <img src={logo} alt="Jays Logo" />

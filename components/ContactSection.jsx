@@ -14,7 +14,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 mt-[60px]">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         
         {/* 📍 Contact Info Section */}

@@ -3,10 +3,10 @@ import { Heart, Sparkles, Target } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="bg-white py-16 px-6 sm:px-10 lg:px-20">
+    <section className="bg-white py-16 px-6 sm:px-10 lg:px-20 mt-[60px]">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6 tracking-tight">
+        <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-6 tracking-tight">
           Welcome to <span className="text-pink-600">JAYS-CLOSET</span>
         </h2>
 

@@ -12,7 +12,7 @@ export default function SingleProduct() {
         return <p className="text-center py-10 text-gray-600">Product not found.</p>
     }
     return(
-      <section className="max-w-6xl mx-auto px-4 py-12">
+      <section className="max-w-6xl mx-auto px-4 py-12 mt-[60px]">
       <div className="flex flex-col md:flex-row gap-10">
         {/* Product Image */}
         <img
@@ -39,7 +39,7 @@ export default function SingleProduct() {
             Add to Cart
           </button>
           <div className="mt-4">
-            <Link to="/" className="text-pink-500 hover:underline">← Back to Shop</Link>
+            <Link to="/shop" className="text-pink-500 hover:underline">← Back to Shop</Link>
           </div>
         </div>
       </div>
