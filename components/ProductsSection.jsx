@@ -11,7 +11,7 @@ export default function ProductsSection(props) {
     : products;
 
   return (
-    <section className="py-12 bg-gray-50 mt-[60px]">
+    <section className="py-12 bg-gray-50 mt-[120px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
           Featured Products
